@@ -5,7 +5,7 @@ class ArticleInfo
 
   def initialize; end
 
-  def self.display_authors
+  def self.display_info
     ScrapedData.store_article_info.each do |el|
      puts "#{[el[:author_name], el[:title], el[:claps_count]]} \n\n"
     end
