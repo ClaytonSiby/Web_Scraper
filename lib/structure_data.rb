@@ -7,7 +7,7 @@ class ArticleInfo
 
   def self.display_info
     ScrapedData.store_article_info.each do |el|
-     puts "#{[el[:author_name], el[:title], el[:claps_count]]} \n\n"
+      puts " author: #{el[:author_name].blue} \n title: #{el[:title].blue} \n popularity: #{el[:claps_count].green} \n\n"
     end
   end
 
@@ -16,8 +16,6 @@ class ArticleInfo
   end
 
   def self.arrange_articles
-    ScrapedData.store_article_info.sort! { |article_one, second_article| second_article[:claps_count] <=> article_one[:claps_count] }
+    ScrapedData.store_article_info.sort! { |one, second| second[:claps_count] <=> one[:claps_count] }
   end
 end
-
-puts ArticleInfo.number_of_articles

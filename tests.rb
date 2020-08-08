@@ -1,7 +1,7 @@
 module TestingModule
-  TESTING_VARIABLE = [
-      'foo',
-      'bar'
+  TESTING_VARIABLE = %w[
+    foo
+    bar
   ].freeze
 
   def display_info
