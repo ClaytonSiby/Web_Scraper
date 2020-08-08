@@ -16,6 +16,7 @@ def start_scrape
   puts "Listing all articles from the most popular to the least: \n\n".green
   sleep(1)
   ArticleInfo.display_info
+  
 end
 
 start_scrape
