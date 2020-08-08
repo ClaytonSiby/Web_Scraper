@@ -1,7 +1,3 @@
-require 'nokogiri'
-require 'httparty'
-require 'pry'
-
 module ScrapedData
   SITE_URL = [
     url = 'https://medium.com/search?q=microverse',
@@ -15,7 +11,7 @@ module ScrapedData
   # store each article info in a hash dataStructure.
   def self.store_article_info
     articles_array = Array.new
-    articles_list = self.inteprete_page.css('div.js-block').to_a
+    articles_list = self.inteprete_page.css('div.js-postList').css('.js-postListHandle').css('div.js-block')
 
     articles_list.each do |article|
         art = { 
@@ -26,6 +22,6 @@ module ScrapedData
         articles_array << art
     end
 
-    articles_array.count
+    articles_array
   end
 end
