@@ -1,16 +1,31 @@
+require 'nokogiri'
+require 'httparty'
+require 'pry'
+
 module ScrapedData
-  UNCHANGED_DATA = [
-      url = 'https://medium.com/search?q=microverse',
-      page = HTTParty.get(url).body,
-      inteprete_page = Nokogiri::HTML(page),
-      articles_list = inteprete_page.css('div.js-block')
+  SITE_URL = [
+    url = 'https://medium.com/search?q=microverse',
   ].freeze
-end
 
-class Articles
-  attr_reader :author_name, :title
+  # get & parse website data
+  def self.inteprete_page
+    Nokogiri::HTML(HTTParty.get(SITE_URL[0]).body)
+  end
 
-  def initialize
-    
+  # store each article info in a hash dataStructure.
+  def self.store_article_info
+    articles_array = Array.new
+    articles_list = self.inteprete_page.css('div.js-block').to_a
+
+    articles_list.each do |article|
+        art = { 
+            author_name: article.css('a.ds-link').text,
+            title: article.css('h3.graf--title').text,
+            claps_count: article.css('span.js-actionMultirecommendCount').text,     
+        }
+        articles_array << art
+    end
+
+    articles_array.count
   end
 end
