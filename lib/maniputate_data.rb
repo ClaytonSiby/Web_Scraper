@@ -2,10 +2,10 @@ require_relative './scraper'
 
 class ArticleInfo
   include ScrapedData
-  
-  def initialize
+
+  def self.display_authors
     ScrapedData.store_article_info
   end
 end
 
-puts ArticleInfo.new
+puts ArticleInfo.display_authors
