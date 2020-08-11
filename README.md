@@ -18,7 +18,7 @@ This project is a Web Scraper that takes information from Medium Website. It scr
 - Pry (for debugging)
 
 ## SetUp
-To start contributing to this project run:
+To start contributing to this project run: <br>
   <code>git clone https://github.com/ClaytonSiby/Web_Scraper.git</code>
 And create a feature branch & open a pull request based on development (develop) branch.
 
