@@ -1,11 +1,11 @@
 # Web_Scraper
-This web scraper is built using Ruby Programming language.
+This web scraper is built using Ruby Programming language. It is a capstone project that is part of the Microverse curriculum, developed to showcase the author's ability to develop a project based on Ruby & any given business logic.
 
 ## Project Design:
 
 ![screenshot](assets/project_screenshot.PNG)
 
-This project is Web Scraper that takes information from Medium Website. It scrapes some articles written by Microverse students & any other articles that have anything to do with Microverse in generall. The scraper takes the information retrieved from the website & uses Nokogiri gem to store everything as an array of objects. I then took this array of objects & retrieve each article information and display it in a way that's more readable & organised. The articles are displayed in discending order based on the number of claps ( which in this case is the popularity that you see when you run the code. )
+This project is a Web Scraper that takes information from Medium Website. It scrapes some articles written by Microverse students & any other articles that have anything to do with Microverse in generall. The scraper takes the information retrieved from the website & uses Nokogiri gem to store everything as an object. I then took this object & retrieve each article information and display it in a way that's more readable & organised. The articles are displayed in discending order based on the number of claps ( which in this case is the popularity that you see when you run the code. )
 
 ## Built With
 
@@ -18,16 +18,15 @@ This project is Web Scraper that takes information from Medium Website. It scrap
 - Pry (for debugging)
 
 ## SetUp
-To get this project on your machine & contribute to the project, you can run <code>git clone https://github.com/ClaytonSiby/Software-Developers-Summit.git</code> on the command line and create a feature branch to your directory both locally and remotely.
+To start contributing to this project run:
+  <code>git clone https://github.com/ClaytonSiby/Web_Scraper.git</code>
+And create a feature branch & open a pull request based on development (develop) branch.
+
+After cloning the project, you should cd into the directory where the code is stored & cd into bin folder then run: <code>bundle install</code> to install the necessary dependencies & lastly run: <code>ruby main.rb</code> to see the scraper in action.
 
 ## Tools Used:
 
 - Visual Studio Code
-
-## Live Demo
-
-
-[Live Demo Link](https://raw.githack.com/ClaytonSiby/Software-Developers-Summit/master/idesign/index.html)
 
 ## Author
 
@@ -42,7 +41,7 @@ To get this project on your machine & contribute to the project, you can run <co
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ClaytonSiby/Software-Developers-Summit/issues).
+Feel free to check the [issues page](https://github.com/ClaytonSiby/Web_Scraper/issues).
 
 ## Please show your support
 
@@ -50,11 +49,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to [Cindy Shin in Behance](https://www.behance.net/adagio07) 
+- Microverse.org
 - StackOverflow
-- W3Schools.com
-- getbootstrap.com
+- tutorialspoint.com
+
 
 # 📝 License
 
-This project is [MIT](https://creativecommons.org/licenses/by-nc/4.0/) licensed.
+This project is [MIT](https://github.com/ClaytonSiby) licensed.
