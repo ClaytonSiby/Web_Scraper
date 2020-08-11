@@ -1,16 +1,7 @@
-module TestingModule
-  TESTING_VARIABLE = %w[
-    foo
-    bar
-  ].freeze
+title = 'What are you doing?'
 
-  def display_info
-    TESTING_VARIABLE.each { |el| puts el }
-  end
+def strip_it_off(element)
+  element.gsub!(' ', '+')
 end
 
-class ReceivingMethods
-  extend TestingModule
-end
-
-ReceivingMethods.display_info
+puts strip_it_off(title)

@@ -10,10 +10,10 @@ module ScrapedData
     Nokogiri::HTML(HTTParty.get(SITE_URL).body)
   end
 
-  # store each article info in a hash dataStructure.
+  # store each article info in a hash dataStructure for better readability.
   def self.store_article_info
     articles_array = []
-    articles_list = inteprete_page.css('div.js-postList').css('.js-postListHandle').css('div.js-block')
+    articles_list = inteprete_page.css('div.js-block')
 
     articles_list.each do |article|
       art = {
