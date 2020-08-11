@@ -19,8 +19,9 @@ This project is a Web Scraper that takes information from Medium Website. It scr
 
 ## SetUp
 To start contributing to this project run: <br>
-  <code>git clone https://github.com/ClaytonSiby/Web_Scraper.git</code>
-And create a feature branch & open a pull request based on development (develop) branch.
+  <code>git clone https://github.com/ClaytonSiby/Web_Scraper.git</code> <br>
+  
+Now create a feature branch & open a pull request based on development (develop) branch.
 
 After cloning the project, you should cd into the directory where the code is stored & cd into bin folder then run: <code>bundle install</code> to install the necessary dependencies & lastly run: <code>ruby main.rb</code> to see the scraper in action.
 
