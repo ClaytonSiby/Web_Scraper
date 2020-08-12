@@ -1,7 +1,8 @@
-# Web_Scraper
+# Microverse Capstone Project: Web_Scraper
 This web scraper is built using Ruby Programming language. It is a capstone project that is part of the Microverse curriculum, developed to showcase the author's ability to develop a project based on Ruby & any given business logic.
 
 ## Project Design:
+> Project output screenshot.
 
 ![screenshot](assets/project_screenshot.PNG)
 
@@ -19,15 +20,15 @@ This project is a Web Scraper that takes information from Medium Website. It scr
 
 ## SetUp
 To start contributing to this project run: <br>
-  <code>git clone https://github.com/ClaytonSiby/Web_Scraper.git</code> <br>
+  `git clone https://github.com/ClaytonSiby/Web_Scraper.git` <br>
 
 Now create a feature branch & open a pull request based on development (develop) branch.
 
-After cloning the project, you should cd into the directory where the code is stored & cd into bin folder then run: <code>bundle install</code> to install the necessary dependencies & lastly run: <code>ruby main.rb</code> to see the scraper in action.
+After cloning the project, you should cd into the (web_scraper) directory where the code is stored & nevigate into bin older using `cd bin` command on the terminal, then run: `bundle install` to install the necessary dependencies & lastly run: `ruby main.rb` to see the scraper in action.
 
 ## To Run Rspec:
 
-Open your terminal & run <code>rspec</code> & the program will run tests for two files (scraper.rb & structure_data.rb).
+Open your terminal & run `rspec` & the program will run tests for two files (scraper.rb & structure_data.rb).
 
 ## Tools Used:
 
