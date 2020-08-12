@@ -3,24 +3,23 @@ require_relative './scraper'
 class ArticleInfo
   include ScrapedData
 
-  def initialize; end
-
   # sort the articles in a discending order ( using the number of claps)
   def arrange_articles(array)
     array.sort! { |one, second| second[:claps_count] <=> one[:claps_count] }
   end
 
-  def request_articles
+  private_instance_methods def request_articles
     ScrapedData.store_article_info
   end
 
   # display the data in a structured way.
-  def display_info
+  private_instance_methods def display_info
+    structured_data = []
     arrange_articles(request_articles).each do |el|
-      sleep(2)
-      puts '======================'
-      puts " author: #{el[:author_name].blue} \n title: #{el[:title].blue} \n popularity: #{el[:claps_count].green} \n \n\n"
+      structured_data << "author: #{el[:author_name].blue}\ntitle: #{el[:title].blue}\npopularity: #{el[:claps_count].green}\n\n"
     end
+
+    structured_data
   end
 
   # count the number of articles received.
